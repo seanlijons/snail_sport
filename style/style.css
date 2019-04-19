@@ -1,0 +1,120 @@
+body{
+	font-family:'Montserrat', sans-serif; /* семейсвто шрифтов */
+	font-size: 20px; /* размер шрифта */
+	line-height: 1.5; /* ћежстрочный интервал */
+	color: white; /* цвет шрифта */
+	margin: 0;
+}
+*,
+*:before,
+*:after {
+	box-sizing: border-box;
+}
+
+h1{
+	margin: 0;
+}
+/*intro*/
+
+.intro{
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	/* margin: 0 auto; */
+	width: 100%; /* ширина */
+	height: 100vh; /* высота занимает весь экран */
+	background: url("../img/fone.jpg") center no-repeat; /* фон, по центру, без повторений */
+	background-size: cover; /* занимает всю площадь экрана */
+}
+
+.intro_iner{
+	width: 100%;
+	max-width: 880px;
+	margin: 0 auto;
+}
+.intro_title{
+	color: #fff;
+	font-size: 110px;
+	font-weight: 700;
+	text-transform: uppercase;
+	text-align: cenetr;
+	line-height: 1;
+}
+/* container */
+
+.container{
+	width: 100%;
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+.header{
+	position: absolute;
+	top: 10px;
+	left: 0;
+	right: 0;
+	width: 100%;
+	z-index: 1000;
+	padding-top: 5px;
+	background: black;
+}
+
+.header_iner{
+	justify-content: space-between;
+	display: flex;
+	align-items: center;
+	
+}
+
+/* logo */
+
+.logo{
+	/* font-size: 30px;
+	font-weight: 700; */
+	background: url("../img/mini_logo.jpg") no-repeat;
+	width: 200px;
+	height: 50px;
+}
+/* nav */
+
+.nav{
+	font-size: 18px;
+	text-transform: uppercase;
+}
+
+/* link */
+
+.nav_link{
+	font-size: 20px;
+	position: relative;
+	color: white;
+	text-decoration: none;
+	transition: color 0.1s linear; /* ѕлавный переход цвета */
+	display: inline-block; /* ссылки в строку */
+	vertical-align: top;
+	margin: 0 10px;
+	
+}
+
+.nav_link:hover{
+	color: #fce38a;
+}
+
+/* желтое подчеркивание ссылок меню */
+.nav_link:after {
+	/* display: none; */
+	opacity: 0;
+	content: "";
+	height: 3px;
+	background-color: #fce38a;
+	position: absolute;
+	top: 100%; 
+	left: 0;
+	z-index: 1;
+	width: 100%;
+	transition: opacity 0.1s liner;
+}
+.nav_link:hover:after {
+	/* display: block; */ /* Полоска реще */
+	opacity: 1; /* Полоска плавней */ 
+}
